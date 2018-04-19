@@ -1,0 +1,209 @@
+<div class="container col-md-6 col-xs-12 pt-5 pb-5">
+  <div class="card card-body">
+    <div class="row">
+      <div class="col-12">
+        <h1>F.A.Q.</h1>
+        <hr>
+        <br>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group faqs">
+
+          <!-- <li class="list-group-item" *ngFor="let faq of faqs; i as index" (click)="i.toggle()" >
+          <strong>{{ faq.q }}</strong>
+          <div class="col-xs-12" #i="bs-collapse" [mdbCollapse]="isCollapsed">
+            <br>
+            <p>{{ faq.a }}</p>
+          </div>
+        </li>
+ -->
+          <li class="list-group-item" (click)="a.toggle()" mdbRippleRadius>
+            <strong>Why use the Pesticide Risk Tool?</strong>
+            <div [mdbCollapse]="isCollapsed" #a="bs-collapse" class="col">
+              <br>
+              <p>While pesticides are invaluable tools for agriculture, pesticide use presents risks that must be carefully
+                managed. The Pesticide Risk Tool is a user-friendly tool to evaluate pesticide risks using the best available
+                science. It helps inform decision-making for growers and crop advisors by providing a visual snapshot of
+                potential risks. The pesticiderisk.org team includes qualified scientists and its risk indices have undergone
+                independent scientific reviews.
+              </p>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="b.toggle()" mdbRippleRadius>
+            <strong>Can all producers use the Pesticide Risk Tool?</strong>
+            <div [mdbCollapse]="isCollapsed" #b="bs-collapse" class="col">
+              <br>
+              <p>Yes, any producer anywhere in the world can use the Pesticide Risk Tool. Its database includes thousands of
+                pesticide products registered by the US EPA for use on many crops and is updated on an ongoing basis.</p>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="c.toggle()" mdbRippleRadius>
+            <strong>What if I am a Whole Foods Market supplier?</strong>
+            <div [mdbCollapse]="isCollapsed" #c="bs-collapse" class="col">
+              <br>
+              <p>To earn credit for the Responsibly Grown Rating System, you must use the custom Whole Foods Market site. Click
+                here to go to the Barn and complete your analysis in the "Advanced Practices" section. If you would like
+                to use the primary pesticiderisk.org site which features more in-depth, site specific risk scores, you can
+                use your FoodLogiQ username and password to log in.</p>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="d.toggle()" mdbRippleRadius>
+            <strong>Why do I have to pay to use the Pesticide Risk Tool?</strong>
+            <div [mdbCollapse]="isCollapsed" #d="bs-collapse" class="col">
+              <br>
+              <p>The Pesticide Risk Tool is a privately funded, non-profit tool. While in the past we were able to offer this
+                service free of charge, we now rely on funding from users. Support through user subscriptions goes to expanding
+                the scope and improving the accuracy of the tool as well as maintaining the website.</p>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="e.toggle()" mdbRippleRadius>
+            <strong>How much does it cost to use the Pesticide Risk Tool?</strong>
+            <div [mdbCollapse]="isCollapsed" #e="bs-collapse" class="col">
+              <br>
+              <p>Pesticide Risk Tool cost is income-based on a sliding scale (see table below). As noted in the terms and conditions,
+                we reserve the right to audit your organization at any point to ensure that the correct income was selected.</p>
+              <table class="table table-sm table-striped">
+                <thead class="elegant-color-dark white-text">
+                  <tr>
+                    <th>Annual Revenue (USD)</th>
+                    <th>Annual Fee (USD)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Less than $250,000</td>
+                    <td>$79</td>
+                  </tr>
+                  <tr>
+                    <td>$250,000 - $1 million</td>
+                    <td>$150</td>
+                  </tr>
+                  <tr>
+                    <td>$1 - $5 million</td>
+                    <td>$250</td>
+                  </tr>
+                  <tr>
+                    <td>$5 - $10 million</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>$10 - $20 million</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>More than $20 million</td>
+                    <td>$1000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="f.toggle()" mdbRippleRadius>
+            <strong>What methods of payment are available for the Pesticide Risk Tool?</strong>
+            <div [mdbCollapse]="isCollapsed" #f="bs-collapse" class="col">
+              <br>
+              <p>Our payment system is set up to securely handle credit cards. If you require an alternate payment method, please
+                <a routerLink="/about">contact us.
+                </a>
+              </p>
+            </div>
+          </li>
+          <li class="list-group-item" (click)="g.toggle()" mdbRippleRadius>
+            <strong>How does the 10-day free trial work?</strong>
+            <div [mdbCollapse]="isCollapsed" #g="bs-collapse" class="col">
+              <br>
+              <p>We recognize that a subscription to pesticiderisk.org may be a significant investment for some, but we think
+                that you will find value using this tool. For this reason we offer a 10 day free trial. Trial users can explore
+                the Pesticide Risk Tool workspace, upload and save pesticide records and get risk scores for each of the
+                13 risk indices. The Pesticide Risk Tool excel uploader, a feature that expedites the process of importing
+                pesticide spray records, is disabled during the trial and reactivated for paid users. All data entered during
+                the trial will be saved.</p>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <strong>Does PRT provide mitigation options for specific risks?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>What do the risk index scores in the Pesticide Risk Tool mean?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>How is risk interpreted for pesticide applications in a greenhouse?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>What if no risk score is given?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Does the Pesticide Risk Tool provide a single metric that combines all of the risk indices scores into a single
+              score that can be used to rank different growers or fields?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Can the Pesticide Risk Tool account for different pesticide application methods, e.g. granular vs. spray?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Are risk calculations based on real impacts?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Is the Bystander Inhalation index risk score for persons on or off the field?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Does the Pesticide Risk Tool account for pesticide accumulation after multiple applications?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>How can I be confident in the accuracy of the risk scores generated by the Pesticide Risk Tool?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Can a user directly import spray records into the Pesticide Risk Tool?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Does the Pesticide Risk Tool warn users if a pesticide application rate is entered that is inconsistent with
+              label recommendations?
+            </strong>
+          </li>
+          <li class="list-group-item">
+            <strong>What if I can't find my product in the Pesticide Risk Tool?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>What is a user defined product?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Who can see and use the products I've defined?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Does PRT account for Maximum Residue Levels (MRLs)?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Does PRT account for interactions between different active ingredients?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>To what extent does PRT capture site-specific features, such as soil type, proximity to water bodies, and various
+              mitigation practices?
+            </strong>
+          </li>
+          <li class="list-group-item">
+            <strong>My crop (e.g. bananas) is not currently listed as an option on PRT. What should I select instead and should I
+              be concerned about an accurate risk analysis due to crop specificity?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>I am outside the US. Can PRT be used if I don’t use EPA registered products, and will the risk scores still apply?</strong>
+          </li>
+          <li class="list-group-item">
+            <strong>Can I change my PRT settings to use metric units?</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+
+
+<div [mdbCollapse]="isCollapsed" #xx="bs-collapse" class="col">
+  <br>
+  <p></p>
+</div>

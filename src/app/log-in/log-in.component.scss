@@ -1,0 +1,12 @@
+.user-form {
+    width: 320px !important;
+    padding: 2em !important;
+}
+
+@media (min-width: 768px) {
+    .user-form {
+        width: 600px !important;
+        padding: 3em !important;
+    }    
+
+}

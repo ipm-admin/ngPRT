@@ -1,0 +1,77 @@
+<div class="container">
+
+  <div class="row pb-5">
+    <div class="col-xs-12 col-md-4 pt-5">
+
+      <div class="card card-body mb-4">
+        <h4 class="card-title">Sites:</h4>
+        <p class="card-text text-muted">A Site is the largest unit of your farming operation and consists of one or more collocated management units (MUs).
+          Create multiple sites for MUs that are not collocated. e.g., Alberta's Acres Farm</p>
+      </div>
+      <div class="card card-body">
+        <h4 class="card-title">Add a new site</h4>
+        <!-- <form>
+            <div class="md-form">
+              <input mdbInputDirective type="text" name="newSiteName" [(ngModel)]="newSite.name" id="newSiteName" class="form-control" mdbActive>
+              <label for="newsiteName">Name</label>
+            </div>
+            <div class="md-form">
+              <input mdbInputDirective type="text" name="newSiteDesc" [(ngModel)]="newSite.desc" id="newSiteDesc" class="form-control"
+              mdbActive>
+              <label for="newSiteDesc">Description</label>
+            </div>
+            <a (click)="createSite()" class="btn btn-green" mdbRippleRadius>Add Site</a>
+          </form> -->
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-8 py-5">
+
+      <!-- <div class="siteList">
+        <div class="card card-body mb-4" *ngFor="let site of sites" [ngClass]="site == this.selectedSite ? 'success-color-dark white-text' : ''">
+          <p class="mb-0">Name:</p>
+          <p class="card-title mb-4">{{site.name}}</p>
+          <p class="mb-0" *ngIf="site.desc != ''">Site Description:</p>
+
+          <p class="card-title" *ngIf="site.desc != ''">{{site.desc}}</p>
+          <div class="flex-row text-center ">
+            <a (click)="selectSite(site)" class="btn btn-green" mdbRippleRadius>Select</a>
+            <a (click)="editSite(site)" class="btn btn-amber" mdbRippleRadius>Edit</a>
+            <a (click)="confirmDelete(site)" class="btn btn-red darken-3" mdbRippleRadius>Delete</a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="siteList">
+        <sites></sites>
+      </div>
+
+
+      <!-- <div class="card card-body mb-4" *ngFor="let unit of units">
+        <p class="text-muted mb-0">Name:</p>
+        <p class="card-title mb-4">{{unit.name}}</p>
+        <p class="text-muted mb-0">Type:</p>
+        <p class="card-title mb-4">{{unit.type}}</p>
+        <p class="text-muted mb-0">Area:</p>
+        <p class="card-title mb-4">{{unit.area}} {{unit.areaUnits}}</p>
+        <p class="text-muted mb-0" *ngIf="unit.desc != ''">Description:</p>
+        <p class="card-title mb-4" *ngIf="unit.desc != ''">{{unit.desc}}</p>
+        <div class="flex-row">
+          <a (click)="selectSite()" class="btn btn-green" mdbRippleRadius>Select</a>
+          <a (click)="editSite()" class="btn btn-amber" mdbRippleRadius>Edit</a>
+          <a (click)="deleteSite()" class="btn btn-red darken-3" mdbRippleRadius>Delete</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <div id="deleteModalOverlay"  [ngClass]="showConfirmDeleteModal ? 'show' : 'hide'">
+<div class="card card-body" id="deleteModal" >
+  <p class="card-title">Are you sure you want to delete this site?</p>
+  <p class="card-text">You will be unable to recover this site in the future.</p>
+  <div class="flex-row text-center">
+    <a (click)="nevermind()" class="btn btn-amber" mdbRippleRadius>Never mind</a>
+    <a (click)="deleteSite()" class="btn btn-red darken-3" mdbRippleRadius>Delete</a>
+  </div>
+</div>
+</div> -->

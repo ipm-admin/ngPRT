@@ -1,0 +1,203 @@
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 mb-4">
+      <div class="list-group">
+        <a (click)="updateSlideNav(1)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 1}">Home</a>
+        <a (click)="updateSlideNav(2)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 2}">Risk Assesment</a>
+        <a (click)="updateSlideNav(3)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 3}">PRT's Multiple Uses</a>
+        <a (click)="updateSlideNav(4)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 4}">History</a>
+        <a (click)="updateSlideNav(5)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 5}">How We're Different</a>
+        <a (click)="updateSlideNav(6)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 6}">PRT Risk Definition</a>
+        <a (click)="updateSlideNav(7)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 7}">Risk Summary</a>
+        <a (click)="updateSlideNav(8)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 8}">Payment</a>
+        <a (click)="updateSlideNav(9)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 9}">Select A Site</a>
+        <a (click)="updateSlideNav(10)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 10}">Create A Scenario</a>
+        <a (click)="updateSlideNav(11)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 11}">Pesticide Application</a>
+        <a (click)="updateSlideNav(12)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 12}">Rate, Date, Area</a>
+        <a (click)="updateSlideNav(13)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 13}">Data Import</a>
+        <a (click)="updateSlideNav(14)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 14}">Get Risk</a>
+        <a (click)="updateSlideNav(15)" class="list-group-item list-group-item-action" [ngClass]="{'elegant-color-dark white-text' : selectedSlide === 15}">View Risk Summary</a>
+      </div>
+
+
+    </div>
+    <div class="col-xs-12 col-md-8">
+
+      <!--Panel-->
+      <div class="card mb-5" >
+        <div class="card-body">
+          <div [ngClass]="{'d-none' : selectedSlide != 1}">
+            <img src="./assets/imgs/prt-logo-condensed.png" style="max-width: 100%;">
+            <h5 class=" mt-3">Improving health and environment by identifying and reducing pesticide risks in agriculture.</h5>
+            <h5>How Can the Pesticide Risk Tool Help You Assess Pesticide Risk?</h5>
+          </div>
+          <!-- slide 2 -->
+          <div [ngClass]="{'d-none' : selectedSlide != 2}">
+            <h2 class="green-text pt-3 pb-3">Why Do We Need Risk Assessment Tools?</h2>
+            <hr>
+            <h4>Pesticide products vary in level of risk.</h4>
+            <ul>
+              <li>Danger, Warning, Caution signal words; acute mammalian toxicity</li>
+              <li>US EPA Reduced Risk Initiative</li>
+            </ul>
+            <h4>Pesticide use sites vary in degrees of vulnerability.</h4>
+            <ul>
+              <li>Proximity to surface water and other sensitive sites</li>
+              <li>Soil and weather characteristics that affect pesticide movement</li>
+            </ul>
+            <h4>Pesticide application methods entail varying degrees of risk.</h4>
+            <ul>
+              <li>Tree-trunk application vs. air-blast sprayer</li>
+              <li>Foliar application vs. soil incorporation</li>
+            </ul>
+          </div>
+          <!--/.Slide 2-->
+          <!--Slide 3-->
+          <div [ngClass]="{'d-none' : selectedSlide != 3}">
+            <h2 class="green-text pt-3 pb-3">PRT's Multiple Uses</h2>
+            <hr>
+            <h4>Metrics</h4>
+            <ul>
+              <li>Measure risk over time and track improvement</li>
+              <li>Compare pesticide risk within commodities and across varieties</li>
+              <li>Measure the reduction in risks caused by: 
+                <ul>
+                  <li>A reduction in the pesticide application rate</li>
+                  <li>Switching to lower-risk pesticide products</li>
+                  <li>Changing the timing and/or method of application</li>
+                </ul>
+              </li>
+            </ul>
+            <h4>Informed Decision-Making</h4>
+            <ul>
+              <li>Run "what-if" and planning scenarios, use to develop a pest management plan</li>
+              <li>Evaluate risks by supplier, commodity and region</li>
+              <li>Product comparison:
+                <ul>
+                  <li>Assess relative risks of different products</li>
+                  <li>Compare estimated risk to label hazards</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!--/.Slide 3-->
+          <!--Slide 4-->
+          <div [ngClass]="{'d-none' : selectedSlide != 4}">
+            <h2 class="green-text pt-3 pb-3">History of Risk Assessment Tools</h2>
+            <hr>
+            <ul>
+              <li><a href="#" class="green-text">Environmental Impact Quotient (EIQ)</a>
+                <ul>
+                  <li>Developed by J. Kovach, C. Petzoldt, J. Degni and J. Tette</li>
+                  <li>Estimates risk to farm workers, consumers and terrestrial organisms</li>
+                  <li>Online user interface - runs by pesticide active ingredients</li>
+                </ul>
+              </li>
+              <li><a href="" class="green-text">Windows Pesticide Screening Tool (Win-PST)</a>
+                <ul>
+                  <li>Developed by the USDA NRCS</li>
+                  <li>Estimates potential for offsite pesticide movement and long-term toxicity to humans and fish</li>
+                  <li>Downloadable application runs by pesticide products or active ingredients</li>
+                </ul>
+              </li>
+              <li><a href="" class="green-text">Pesticide Environmental Assessment System (PEAS)</a>
+                <ul>
+                  <li>Developed by C. Benbrook</li>
+                  <li>Estimates risk to workers, consumers, birds, aquatic organisms, and honeybees</li>
+                  <li>Operated by BCS Ecologic</li>
+                </ul>
+              </li>
+              <li><a href="" class="green-text">Pesticide Risk Management Profiling Tool (PRoMPT)</a>
+                <ul>
+                  <li>Developed by Unilever Colworth</li>
+                  <li>Estimates risk to ground water, terrestrial ecosystems, aquatic ecosystems and operators</li>
+                  <li>Online application, runs by pesticide active ingredients</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!--/.Slide 4-->
+          <!--Slide 5-->
+          <div [ngClass]="{'d-none' : selectedSlide != 5}">
+            <h2 class="green-text pt-3 pb-3">How is the Pesticide Risk Tool Different?</h2>
+            <hr>
+            <h4>Developed by diverse project team:</h4>
+            <ul>
+              <li>IPM Institute of North America and project partners Oregon State University, Environment Canada, BCS Ecologic, Pesticide
+                Research Institute and the Natural Resources Defense Council</li>
+            </ul>
+            <h4>Estimates risk to workers, birds, earthworms, small mammals, and aquatic ecosystems:</h4>
+            <ul>
+              <li>The Pesticide Risk Tool offers state-of-the-art pesticide risk analysis, using pesticide application rates and methods
+                to account for potential exposure to non-target organisms. Our indices cover a broad range of resource concerns and
+                are validated with field data where possible.</li>
+            </ul>
+            <h4>Able to run by US EPA registered pesticide products:</h4>
+            <ul>
+              <li>Our database of pesticide products is comprehensive and up-to-date, containing nearly all US products actively registered
+                for agricultural use.</li>
+            </ul>
+            <h4>The Pesticide Risk Tool is online and user-friendly:</h4>
+            <ul>
+              <li>The Pesticide Risk Tool can be accessed from any computer with an internet connection. Store information about your site
+                and pesticide applications. Any data stored by the Pesticide Risk Tool are secure and confidential.</li>
+            </ul>
+            <h4>Keep reading to find out how the Pesticide Risk Tool can work for you!</h4>
+          </div>
+          <!--/.Slide 5-->
+          <!--Slide 6-->
+          <div [ngClass]="{'d-none' : selectedSlide != 6}">
+            <h2 class="green-text pt-3 pb-3">PRT Risk Definition</h2>
+            <hr>
+            <h4>Scores are the probability of an adverse effect</h4>
+            <br>
+            <h4>Accounts for chemical hazards and likeliness of exposure</h4>
+            <br>
+            <h4>Covers full suite of risks, including environmental, human bystander, consumer dietary, and pollinator</h4>
+          </div>
+          <!--/.Slide 6-->
+          <!--Slide 7-->
+          <div [ngClass]="{'d-none' : selectedSlide != 7}">
+            <h2 class="green-text pt-3 pb-3">Pesticide Risk Tool - Risk Summary</h2>
+            <hr>
+            <p>Coming soon</p>
+          </div>
+          <!--/.Slide 7-->
+
+          <!--Slide 8-->
+          <div [ngClass]="{'d-none' : selectedSlide != 8}">
+            <h2 class="green-text pt-3 pb-3">Getting Started: Payment or Free Trial</h2>
+            <hr>
+            <p>After logging in, if you are a first-time user or an existing user with an expired payment, you will be redirected to our
+            payments page. If you just want to try the Pesticide Risk Tool, we recommend starting with the 10-day free trial, otherwise
+            you will need to first make a payment. If you're curious why we're asking users to pay for the Pesticide Risk Tool, please</p>
+          </div>
+          <!--/.Slide 8-->
+
+
+
+
+
+
+
+
+          <hr>
+          <a class="btn btn-dark-green waves-light" (click)="prevSlide()" mdbRippleRadius>Back</a>
+          <a class="btn btn-dark-green waves-light" (click)="nextSlide()" mdbRippleRadius>Next</a>
+        </div>
+      </div>
+      <!--/.Panel-->
+
+     
+    </div>
+  </div>
+
+</div>
+
+
+<!--Slide 6-->
+<div [ngClass]="{'d-none' : selectedSlide != 6}">
+  <h2 class="green-text pt-3 pb-3">PRT's Multiple Uses</h2>
+  <hr>
+</div>
+<!--/.Slide 6-->

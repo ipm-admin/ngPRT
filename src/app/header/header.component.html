@@ -1,0 +1,58 @@
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark elegant-color-dark ie-nav" [containerInside]="false">
+  
+  
+  <logo>
+    <a class="logo navbar-brand" routerLink="">
+      <!-- <strong>PRT</strong> -->
+      <img src="./assets/imgs/prt-logo-condensed.png" alt="" height="55">
+
+    </a>
+  </logo>
+  <links>
+    <ul class="navbar-nav mr-auto">
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          About
+          <span class="caret"></span>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbRippleRadius routerLink="/about">About Pesticide Risk Tool</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius routerLink="team-members">Team Members</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Project Materials</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Project Resources</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Data Privacy</a>
+        </div>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Help
+          <span class="caret"></span>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbRippleRadius routerLink="guided-tour">Guided Tour</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Interpreting Risk Scores</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Risk Summary Legend</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius routerLink="faq">FAQ</a>
+        </div>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link" routerLink="/register"d>Sign Up</a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link amber-text" routerLink="/log-in">Log In</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+<!-- Main -->
+<div class="container mt-3 pt-3">
+  <div class="row mt-5"></div>
+  </div>
