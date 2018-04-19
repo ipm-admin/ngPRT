@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -18,9 +16,12 @@ import { HomeComponent } from './home/home.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { SiteComponent } from './workspace/sites/site/site.component';
-import { SitesService } from './sites.service';
 import { SitesComponent } from './workspace/sites/sites.component';
+import { ManagementUnitsComponent } from './workspace/management-units/management-units.component';
+import { ManagementUnitComponent } from './workspace/management-units/management-unit/management-unit.component';
 
+import { SitesService } from './sites.service';
+import { ManagementUnitsService } from './management-units.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { SitesComponent } from './workspace/sites/sites.component';
     WorkspaceComponent,
     SiteComponent,
     SitesComponent,
+    ManagementUnitsComponent,
+    ManagementUnitComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { SitesComponent } from './workspace/sites/sites.component';
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    SitesService
+    SitesService,
+    ManagementUnitsService
   ],
   bootstrap: [AppComponent]
 })

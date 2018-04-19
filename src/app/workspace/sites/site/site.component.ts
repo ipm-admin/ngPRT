@@ -13,7 +13,8 @@ export class SiteComponent implements OnInit {
   }
   @Output() selectedSite = new EventEmitter<string>();
   @Output() deleteSelectedSite = new EventEmitter<string>();
-
+  // @Output() openEditModal = new EventEmitter<string>();
+ 
 
   constructor() { }
 
@@ -21,12 +22,12 @@ export class SiteComponent implements OnInit {
   }
 
   selectSite(site) {
-    this.selectedSite.emit(site)
+    this.selectedSite.emit(site);
   }
 
-  editSite(site) {
-    console.log(site);
-  }
+  // editSite(site) {
+  //   this.openEditModal.emit(site);
+  // }
 
   deleteSite(site) {
     this.deleteSelectedSite.emit(site);

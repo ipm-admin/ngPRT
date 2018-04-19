@@ -1,3 +1,8 @@
 <div class="container">
-    <sites></sites>
+  <sites *ngIf="step == 1"></sites>
+  <management-units *ngIf="step == 2"></management-units>
+  <div class="fixed-bottom py-1 px-2 elegant-color-dark">
+    <a (click)="nextStep()" class="btn btn-green float-right" mdbRippleRadius [ngClass]="!readyToAdvance ? 'disabled' : ''">Next</a>
+    <a (click)="prevStep()" class="btn btn-green float-right" mdbRippleRadius [ngClass]="step == 1 ? 'disabled' : ''">Back</a>
   </div>
+</div>

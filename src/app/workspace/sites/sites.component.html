@@ -21,12 +21,35 @@
         </div>
         <a (click)="createSite()" class="btn btn-green" mdbRippleRadius>Add Site</a>
       </form>
-    </div>
+    </div> 
+
+    <!-- <div class="card card-body mt-4">
+      <h4 class="card-title">Edit site</h4>
+      <form>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="editSiteName" [(ngModel)]="tempSite.name" id="selectedSiteName" class="form-control"
+            mdbActive>
+          <label for="selectedSiteName">Name</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="selectedSiteDesc" [(ngModel)]="tempSite.desc" id="selectedSiteDesc" class="form-control"
+            mdbActive>
+          <label for="selectedSiteDesc">Description</label>
+        </div>
+        <a (click)="saveSite(tempSite)" class="btn btn-green" mdbRippleRadius>Save</a>
+      </form>
+    </div> -->
+
   </div>
 
   <div class="col-xs-12 col-md-8 py-5">
-    <div class="siteList">
-      <site *ngFor="let site of sites" [site]="site" (selectedSite)="getSelectedSite(site)" (deleteSelectedSite)="deleteSite(site)"
+    <div class="site-list">
+      <site 
+        *ngFor="let site of sites" 
+        [site]="site" 
+        (selectedSite)="getSelectedSite(site)" 
+        (openEditModal)="editSite(site)"
+        (deleteSelectedSite)="deleteSite(site)"
         [ngClass]="site == this.selectedSite ? 'success-color-dark green-text' : ''"></site>
       <!-- TODO: Make the site show it is selected isntead of just the text turning green -->
     </div>

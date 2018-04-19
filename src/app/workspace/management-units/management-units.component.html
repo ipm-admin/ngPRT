@@ -1,0 +1,15 @@
+<div class="row pb-5">
+  <div class="col-xs-12 col-md-4 pt-5">
+    <div class="card card-body mb-4">
+      <h4 class="card-title">Management Units:</h4>
+      <p class="card-text text-muted">A Management Unit is a smaller piece of land within a site, usually a field. Also called a block.</p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8 py-5">
+    <div class="management-unit-list">
+       <management-unit
+        *ngFor="let managementUnit of managementUnits"
+        [managementUnit]="managementUnit"></management-unit>
+    </div>
+  </div>
+</div>

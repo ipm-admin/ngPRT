@@ -8,12 +8,31 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent implements OnInit {
-
+  step = 1;
+  readyToAdvance = true;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  prevStep() {
+    if (this.step > 1) {
+      this.step--;
+    }
+  }
+
+  nextStep() {
+    if (this.step >= 1) {
+      this.step++;
+    }
+  }
+
+  setReadyToAdvance() {
+    this.readyToAdvance = true;
+  }
+
+
   
   
 

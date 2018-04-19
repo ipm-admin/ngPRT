@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { SiteComponent } from './site/site.component';
 import { SitesService } from '../../sites.service';
+import { EventEmitter } from 'selenium-webdriver';
 
 @Component({
   selector: 'sites',
@@ -10,11 +11,16 @@ import { SitesService } from '../../sites.service';
 export class SitesComponent implements OnInit {
   sites = [];
   selectedSite;
+  tempSite = {
+    name: '',
+    desc: '',
+    id: null
+  };
   newSite = {
     name: '',
     desc: '',
     id: 0
-  }
+  };
   
   constructor(private sitesService: SitesService) { }
 
@@ -23,14 +29,15 @@ export class SitesComponent implements OnInit {
   }
   
   getSites() {
-    this.sites = this.sitesService.getSites()
+    this.sites = this.sitesService.getSites();
   }
 
   getSelectedSite(site) {
-    this.selectedSite = site;
+    this.selectedSite != site ? this.selectedSite = site : this.selectedSite = null;
   }
 
   createSite() {
+    // will need to find a new way to create ids, obviously
     this.newSite.id = this.sites.length;
     this.sites.push(this.newSite);
     this.newSite = {
@@ -40,8 +47,21 @@ export class SitesComponent implements OnInit {
     }
   }
 
+  // editSite(site) {
+  //   this.selectedSite = site;
+  //   this.tempSite = {
+  //     name: site.name,
+  //     desc: site.desc,
+  //     id: site.id
+  //   };
+  // }
+
+  saveSite(site) {
+    site = this.tempSite;
+  }
+
   deleteSite(site) {
     // need to pass this to a confirmation box
-    this.sites.splice(this.sites.indexOf(site),1)
+    this.sites.splice(this.sites.indexOf(site),1);
   }
 }
