@@ -12,6 +12,7 @@ export class SiteComponent implements OnInit {
     id: number
   }
   @Output() selectedSite = new EventEmitter<string>();
+  @Output() deleteSelectedSite = new EventEmitter<string>();
 
 
   constructor() { }
@@ -28,7 +29,7 @@ export class SiteComponent implements OnInit {
   }
 
   deleteSite(site) {
-    console.log(site);
+    this.deleteSelectedSite.emit(site);
   }
 
 }

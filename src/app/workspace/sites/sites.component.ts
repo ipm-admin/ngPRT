@@ -22,7 +22,11 @@ export class SitesComponent implements OnInit {
   }
 
   getSelectedSite(site) {
-    console.log(site);
     this.selectedSite = site;
+  }
+
+  deleteSite(site) {
+    // need to pass this to a confirmation box
+    this.sites.splice(this.sites.indexOf(site),1)
   }
 }
