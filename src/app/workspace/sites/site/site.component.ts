@@ -18,4 +18,16 @@ export class SiteComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectSite(site) {
+    console.log(site);
+  }
+
+  editSite(site) {
+    console.log(site);
+  }
+
+  deleteSite(site) {
+    console.log(site);
+  }
+
 }
