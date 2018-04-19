@@ -1,7 +1,34 @@
-<site 
-  *ngFor="let site of sites"
-  [site]="site"
-  (selectedSite)="getSelectedSite(site)"
-  (deleteSelectedSite)="deleteSite(site)"
-   [ngClass]="site == this.selectedSite ? 'success-color-dark green-text' : ''"></site>
-   <!-- TODO: Make the site show it is selected isntead of just the text turning green -->
+<div class="row pb-5">
+  <div class="col-xs-12 col-md-4 pt-5">
+    <div class="card card-body mb-4">
+      <h4 class="card-title">Sites:</h4>
+      <p class="card-text text-muted">A Site is the largest unit of your farming operation and consists of one or more collocated management units (MUs).
+        Create multiple sites for MUs that are not collocated. e.g., Alberta's Acres Farm</p>
+    </div>
+
+    <div class="card card-body">
+      <h4 class="card-title">Add a new site</h4>
+      <form>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newSiteName" [(ngModel)]="newSite.name" id="newSiteName" class="form-control"
+            mdbActive>
+          <label for="newsiteName">Name</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newSiteDesc" [(ngModel)]="newSite.desc" id="newSiteDesc" class="form-control"
+            mdbActive>
+          <label for="newSiteDesc">Description</label>
+        </div>
+        <a (click)="createSite()" class="btn btn-green" mdbRippleRadius>Add Site</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-8 py-5">
+    <div class="siteList">
+      <site *ngFor="let site of sites" [site]="site" (selectedSite)="getSelectedSite(site)" (deleteSelectedSite)="deleteSite(site)"
+        [ngClass]="site == this.selectedSite ? 'success-color-dark green-text' : ''"></site>
+      <!-- TODO: Make the site show it is selected isntead of just the text turning green -->
+    </div>
+  </div>
+</div>

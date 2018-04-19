@@ -10,6 +10,11 @@ import { SitesService } from '../../sites.service';
 export class SitesComponent implements OnInit {
   sites = [];
   selectedSite;
+  newSite = {
+    name: '',
+    desc: '',
+    id: 0
+  }
   
   constructor(private sitesService: SitesService) { }
 
@@ -23,6 +28,16 @@ export class SitesComponent implements OnInit {
 
   getSelectedSite(site) {
     this.selectedSite = site;
+  }
+
+  createSite() {
+    this.newSite.id = this.sites.length;
+    this.sites.push(this.newSite);
+    this.newSite = {
+      name: '',
+      desc: '',
+      id: 0
+    }
   }
 
   deleteSite(site) {
