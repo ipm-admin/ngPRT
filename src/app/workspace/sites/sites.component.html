@@ -1,3 +1,6 @@
 <site 
   *ngFor="let site of sites"
-  [site]="site"></site>
+  [site]="site"
+  (selectedSite)="getSelectedSite(site)"
+   [ngClass]="site == this.selectedSite ? 'success-color-dark green-text' : ''"></site>
+   <!-- TODO: Make the site show it is selected isntead of just the text turning green -->

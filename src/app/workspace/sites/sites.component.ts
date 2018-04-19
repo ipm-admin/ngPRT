@@ -9,6 +9,7 @@ import { SitesService } from '../../sites.service';
 })
 export class SitesComponent implements OnInit {
   sites = [];
+  selectedSite;
   
   constructor(private sitesService: SitesService) { }
 
@@ -18,5 +19,10 @@ export class SitesComponent implements OnInit {
   
   getSites() {
     this.sites = this.sitesService.getSites()
+  }
+
+  getSelectedSite(site) {
+    console.log(site);
+    this.selectedSite = site;
   }
 }

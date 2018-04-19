@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'site',
@@ -11,6 +11,7 @@ export class SiteComponent implements OnInit {
     desc: string,
     id: number
   }
+  @Output() selectedSite = new EventEmitter<string>();
 
 
   constructor() { }
@@ -19,7 +20,7 @@ export class SiteComponent implements OnInit {
   }
 
   selectSite(site) {
-    console.log(site);
+    this.selectedSite.emit(site)
   }
 
   editSite(site) {
