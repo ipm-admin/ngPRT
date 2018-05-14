@@ -1,7 +1,11 @@
 <div class="container">
-  <sites *ngIf="step == 1"></sites>
+  <sites *ngIf="step == 1" (siteChange)="setStatus(status)"></sites>
   <management-units *ngIf="step == 2"></management-units>
-  <div class="fixed-bottom py-1 px-2 elegant-color-dark">
+  <scenarios *ngIf="step == 3"></scenarios>
+  <applications *ngIf="step == 4"></applications>
+  
+  <!-- Turn this into a modal that is opened when it is time to advance. add a back arrow in the top left/-->
+  <div class="d-flex flex-row-reverse pt-1 pb-3 px-2" >
     <a (click)="nextStep()" class="btn btn-green float-right" mdbRippleRadius [ngClass]="!readyToAdvance ? 'disabled' : ''">Next</a>
     <a (click)="prevStep()" class="btn btn-green float-right" mdbRippleRadius [ngClass]="step == 1 ? 'disabled' : ''">Back</a>
   </div>

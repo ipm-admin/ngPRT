@@ -19,9 +19,17 @@ import { SiteComponent } from './workspace/sites/site/site.component';
 import { SitesComponent } from './workspace/sites/sites.component';
 import { ManagementUnitsComponent } from './workspace/management-units/management-units.component';
 import { ManagementUnitComponent } from './workspace/management-units/management-unit/management-unit.component';
+import { ScenariosComponent } from './workspace/scenarios/scenarios.component';
+import { ScenarioComponent } from './workspace/scenarios/scenario/scenario.component';
+import { ApplicationsComponent } from './workspace/applications/applications.component';
+import { ApplicationComponent } from './workspace/applications/application/application.component';
 
-import { SitesService } from './sites.service';
-import { ManagementUnitsService } from './management-units.service';
+import { SitesService } from './shared/sites.service';
+import { ManagementUnitsService } from './shared/management-units.service';
+import { ScenariosService } from './shared/scenarios.service';
+import { ApplicationsService } from './shared/applications.service';
+import { BulkUploaderComponent } from './bulk-uploader/bulk-uploader.component';
+import { AiRiskAnalysisComponent } from './ai-risk-analysis/ai-risk-analysis.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +48,12 @@ import { ManagementUnitsService } from './management-units.service';
     SitesComponent,
     ManagementUnitsComponent,
     ManagementUnitComponent,
+    ScenariosComponent,
+    ScenarioComponent,
+    ApplicationsComponent,
+    ApplicationComponent,
+    BulkUploaderComponent,
+    AiRiskAnalysisComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +64,9 @@ import { ManagementUnitsService } from './management-units.service';
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
     SitesService,
-    ManagementUnitsService
+    ManagementUnitsService,
+    ScenariosService,
+    ApplicationsService
   ],
   bootstrap: [AppComponent]
 })

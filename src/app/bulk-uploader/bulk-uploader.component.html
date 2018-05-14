@@ -1,0 +1,192 @@
+<div class="container pb-5">
+  <div class="row pt-5">
+    <div class="col-md-5 mb-3">
+      <div class="col-xs-12">
+        <div class="card card-body">
+          <h2 class="card-title">PRT Bulk Analysis</h2>
+          <p class="card-text mb-1">Select an excel file (.xlsx)</p>
+          <p class="card-text">Please remove all comas from file name before uploading.</p>
+          <form>
+            <div class="btn-sm mb-3" mdbWavesEffect>
+              <input type="file"  mdbFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+            </div>
+            <p class="card-text mb-3">Select Risk Indicies to include</p>
+            <p class="card-text">Presets:
+              <span>
+                <select>
+                  <option>Custom</option>
+                  <option>PSI</option>
+                  <option>Eco Apple</option>
+                </select>
+
+              </span>
+            </p>
+            <div style="height: 100px; overflow: auto;" class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox1">
+                <label class="form-check-label" for="checkbox1">Aquatic Algae</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox2">
+                <label class="form-check-label" for="checkbox2">Aquatic Invertebrates</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox3">
+                <label class="form-check-label" for="checkbox3">Avian Acute</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox4">
+                <label class="form-check-label" for="checkbox4">Avian Reproductive</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox5">
+                <label class="form-check-label" for="checkbox5">Earthworm</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox6">
+                <label class="form-check-label" for="checkbox6">Fish Chronic</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox7">
+                <label class="form-check-label" for="checkbox7">Small Mammal Acute</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox8">
+                <label class="form-check-label" for="checkbox8">Dermal Cancer</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox9">
+                <label class="form-check-label" for="checkbox9">Worker Dermal</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox10">
+                <label class="form-check-label" for="checkbox10">Inhalation</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox11">
+                <label class="form-check-label" for="checkbox11">Consumer Cancer</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox12">
+                <label class="form-check-label" for="checkbox12">Human Dietary</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox13">
+                <label class="form-check-label" for="checkbox13">Pollinator Off Crop</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox14">
+                <label class="form-check-label" for="checkbox14">Pollinator No Bloom</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" mdbInputDirective type="checkbox" id="checkbox15">
+                <label class="form-check-label" for="checkbox15">Pollinator In Bloom</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="card-text" for="DRIFoodIdSelect">Select Crop:</label>
+              <select id="DRIFoodIdSelect">
+                <option value="1">Almond </option>
+                <option value="4">Apple </option>
+                <option value="5">Asparagus </option>
+                <option value="87">Banana </option>
+                <option value="13">Barley </option>
+                <option value="14">Black Bean </option>
+                <option value="15">Blueberry </option>
+                <option value="17">Broccoli </option>
+                <option value="18">Cabbage </option>
+                <option value="19">Cantaloupe </option>
+                <option value="20">Carrots </option>
+                <option value="21">Cauliflower </option>
+                <option value="22">Celery </option>
+                <option value="23">Cherry </option>
+                <option value="24">Cherry Tomatoes </option>
+                <option value="25">Cilantro </option>
+                <option value="26">Corn Grain </option>
+                <option value="27">Cranberry </option>
+                <option value="28">Cucumber </option>
+                <option value="29">Eggplant </option>
+                <option value="30">Garbanzo Bean </option>
+                <option value="33">Grape </option>
+                <option value="32">Grapefruit </option>
+                <option value="34">Green Bean </option>
+                <option value="37">Green Onion </option>
+                <option value="38">Greens, Collard </option>
+                <option value="39">Greens, Kale </option>
+                <option value="40">Hot Pepper </option>
+                <option value="41">Kidney Bean </option>
+                <option value="42">Lettuce </option>
+                <option value="43">Mango </option>
+                <option value="44">Mushroom </option>
+                <option value="45">Nectarine </option>
+                <option value="46">Oats Grain </option>
+                <option value="47">Onion </option>
+                <option value="49">Orange </option>
+                <option value="50">Papaya </option>
+                <option value="51">Peach </option>
+                <option value="55">Pear </option>
+                <option value="57">Pineapple </option>
+                <option value="58">Pinto Bean </option>
+                <option value="59">Plum </option>
+                <option value="61">Potato </option>
+                <option value="86">Rapeseed (Canola) </option>
+                <option value="85">Raspberry </option>
+                <option value="64">Rice </option>
+                <option value="65">Snap Pea </option>
+                <option value="66">Soybean grain </option>
+                <option value="67">Spinach </option>
+                <option value="70">Strawberry </option>
+                <option value="72">Summer Squash </option>
+                <option value="73">Sweet Bell Pepper </option>
+                <option value="74">Sweet Corn </option>
+                <option value="76">Sweet Potato </option>
+                <option value="77">Tangerine </option>
+                <option value="79">Tomato </option>
+                <option value="81">Watermelon </option>
+                <option value="83">Wheat </option>
+                <option value="84">Winter Squash </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="card-text"for="AnalysisToPerform">Get results for:</label>
+              <select id="AnalysisToPerform">
+                <option value="block">Block-Level Data</option>
+                <option value="product">Product-Level Data</option>
+                <option value="both">Botha</option>
+              </select>
+            </div>
+             <p class="card-text">Note: including product level analysis lengthens execution time.</p>
+             <div class="form-group text-center">
+               <button class="btn btn-green btn-lg" type="button" id="initiate-bulk-analysis">Calculate Risk Scores</button>
+              </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="card card-body">
+        <h2 class="card-title">File Upload Status</h2>
+        <hr class="mt-1">
+        <h5 class="card-title">Information</h5>
+        <p class="card-text">The PRT Bulk Analysis tool performs a full risk analysis on many blocks (fields) of pesticide data.</p>
+        <h5 class="card-title">Options</h5>
+        <ul>
+          <li class="card-text">Select the risk indices you'd like to include, or choose a preset.</li>
+          <li class="card-text">
+            Choose the level of detail you'd like to see in results by selecting
+            <ul>
+              <li>Block-Level - Outputs risk result summaries for each block.</li>
+              <li>Product-Level - Outputs risk result summaries for each active ingredient identified for each pesticide application, organized by block.</li>
+            </ul>
+          </li>
+        </ul>
+        <h5 class="card-title">Note on the PSI preset</h5>
+        <p class="card-text">Only a subset of risk indices apply to potatoes. Selecting PSI removes the level of detail option (forces block-level results)
+        and prompts you to indicate the region the data applies to and By selecting a region, you will see the reduction in the number
+        of high risk scores based on an estimated number of high risk scores per block by region without using IPM practices. If
+        a region isn't selected, you will only see high risk scores per block.</p>
+      </div>
+    </div>
+  </div>
+</div>

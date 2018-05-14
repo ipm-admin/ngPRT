@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { BulkUploaderComponent } from './bulk-uploader/bulk-uploader.component';
+import { AiRiskAnalysisComponent } from './ai-risk-analysis/ai-risk-analysis.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,12 @@ const routes: Routes = [
   },
   {
     path: 'workspace', component: WorkspaceComponent
+  },
+  {
+    path: 'bulk-uploader', component: BulkUploaderComponent
+  },
+  {
+    path: 'risk-by-ai', component: AiRiskAnalysisComponent
   }
 ];
 

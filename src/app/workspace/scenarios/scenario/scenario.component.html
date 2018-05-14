@@ -1,0 +1,19 @@
+<div class="card card-body mb-4">
+  <p class="mb-0">Name:</p>
+  <p class="card-title mb-4">{{scenario.name}}</p>
+  <p class="mb-0">Commodity:</p>
+  <p class="card-title mb-4">{{scenario.commodity}}</p>
+  <p class="mb-0">Description (optional):</p>
+  <p class="card-title mb-4">{{scenario.desc}}</p>
+  <p class="mb-0">Bloom Start (optional):</p>
+  <p class="card-title mb-4">{{scenario.bloomStart}}</p>
+  <p class="mb-0">Bloom End (optional):</p>
+  <p class="card-title mb-4">{{scenario.bloomEnd}}</p>
+  <p class="mb-0">Harvest Date (optional):</p>
+  <p class="card-title">{{scenario.harvestDate}}</p>
+  <div class="flex-row">
+    <a (click)="selectScenario(scenario)" class="btn btn-green" mdbRippleRadius>Select</a>
+    <a (click)="editScenario(scenario)" class="btn btn-amber" mdbRippleRadius>Edit</a>
+    <a (click)="deleteScenario(scenario)" class="btn btn-red darken-3" mdbRippleRadius>Delete</a>
+  </div>
+</div>

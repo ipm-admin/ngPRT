@@ -1,7 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { SiteComponent } from './site/site.component';
-import { SitesService } from '../../sites.service';
-import { EventEmitter } from 'selenium-webdriver';
+import { SitesService } from '../../shared/sites.service';
 
 @Component({
   selector: 'sites',
@@ -9,24 +8,25 @@ import { EventEmitter } from 'selenium-webdriver';
   styleUrls: ['./sites.component.scss']
 })
 export class SitesComponent implements OnInit {
+  @Output() siteChange = new EventEmitter<string>();
   sites = [];
   selectedSite;
   tempSite = {
-    name: '',
-    desc: '',
+    name: null,
+    desc: null,
     id: null
   };
   newSite = {
-    name: '',
-    desc: '',
-    id: 0
+    name: null,
+    desc: null,
+    id: null
   };
   
   constructor(private sitesService: SitesService) { }
 
   ngOnInit() {
     this.getSites();
-  }
+  } 
   
   getSites() {
     this.sites = this.sitesService.getSites();
@@ -34,6 +34,8 @@ export class SitesComponent implements OnInit {
 
   getSelectedSite(site) {
     this.selectedSite != site ? this.selectedSite = site : this.selectedSite = null;
+    console.log(site)
+    this.siteChange.emit('true')
   }
 
   createSite() {
@@ -41,9 +43,9 @@ export class SitesComponent implements OnInit {
     this.newSite.id = this.sites.length;
     this.sites.push(this.newSite);
     this.newSite = {
-      name: '',
-      desc: '',
-      id: 0
+      name: null,
+      desc: null,
+      id: null
     }
   }
 

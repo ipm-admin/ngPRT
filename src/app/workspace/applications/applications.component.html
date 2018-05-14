@@ -1,0 +1,154 @@
+<div class="row pb-5">
+  <div class="col-xs-12 col-md-4 pt-5">
+    <div class="card card-body mb-4">
+      <h4 class="card-title">Pesticide Applications:</h4>
+      <p class="card-text text-muted">Add, import and select pesticide applications for risk analysis</p>
+    </div>
+
+    <div class="card card-body">
+      <button type="button" class="btn btn-green waves-light" (click)="addPesticideRecordModal.show()" mdbWavesEffect>Add a Pesticide Record</button>
+<!--Todo: create file uploader section-->
+      <button class="btn btn-green">Import Spray Records</button>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-8 py-5">
+    <div class="application-list">
+      <application *ngFor="let application of applications" [application]="application"></application>
+    </div>
+  </div>
+</div>
+
+<!--Add Application Modal-->
+<div class="modal fade" mdbModal #addPesticideRecordModal="mdb-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Add a Pesitcide Record</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="addPesticideRecordModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-green waves-light" (click)="addPesticideRecordModal.hide();epaModal.show()" mdbWavesEffect>EPA Registered Products</button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-green waves-light" (click)="addPesticideRecordModal.hide();describedProductsModal.show()"
+                mdbWavesEffect>My Described Products</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--./Add Application Modal-->
+
+<!--EPA Products Modal-->
+<div class="modal fade" style="overflow: auto;" mdbModal #epaModal="mdb-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">EPA Registered Products</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="epaModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="col-sm-12">
+                <!--Right-->
+                <div class="md-form input-group">
+                  <input type="search" class="form-control" placeholder="Search for...">
+                  <div class="input-group-btn">
+                    <button class="btn btn-green waves-light" type="button" mdbWavesEffect>Search</button>
+                  </div>
+                </div>
+              </div>
+              <p>EPA products?</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-body mb-3">
+                <h5 class="card-title">Can't find your product?</h5>
+                <p class="card-text">Click below to see examples of where you can find the US EPA registration number on a product label.</p>
+                <button class="btn btn-green">See Examples</button>
+              </div>
+              <div class="card card-body mb-3">
+                <h5 class="card-title">Product registered in another country?</h5>
+                <p class="card-text">Products not registered with US EPA may be described and saved into the Pesticide Risk Tool. Click the button below to
+                  initiate the process.</p>
+                <button class="btn btn-green">Describe Your Product</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex-row">
+            <button type="button" class="btn btn-green" aria-label="Back" (click)="epaModal.hide();addPesticideRecordModal.show()">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--./EPA Products Modal-->
+
+<!--Described Products Modal -->
+<div class="modal fade" style="overflow: auto;" mdbModal #describedProductsModal="mdb-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+  aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">My Described Products</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="describedProductsModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="col-sm-12">
+                <!--Right-->
+                <div class="md-form input-group">
+                  <input type="search" class="form-control" placeholder="Search for...">
+                  <div class="input-group-btn">
+                    <button class="btn btn-green waves-light" type="button" mdbWavesEffect>Search</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <p>Described products?</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-body mb-3">
+                <h5 class="card-title">Described Products</h5>
+                <p class="card-text">These are your described products. Products without a US EPA Registration Number may be described and entered into the Pesticide
+                Risk Tool</p>
+                <button class="btn btn-green">Describe Another Product</button>
+              </div>
+              <div class="card card-body mb-3">
+                <h5 class="card-title">Frequently Asked Questions</h5>
+                <p class="card-text"><a href="#">What is a described product?</a></p>
+                <p class="card-text"><a href="#">Who can see and use the products I've described?</a></p>
+                <a href="#" class="btn btn-green">See more FAQs</a>                
+              </div>
+            </div>
+           
+          </div>
+          <div class="flex-row">
+            <button type="button" class="btn btn-green" aria-label="Back" (click)="describedProductsModal.hide();addPesticideRecordModal.show()">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--./Described Products Modal -->

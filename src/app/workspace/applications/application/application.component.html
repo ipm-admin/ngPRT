@@ -1,0 +1,20 @@
+<div class="card card-body mb-4">
+  <p class="mb-0">Name:</p>
+  <p class="card-title mb-4">{{application.product}}</p>
+  <p class="mb-0">Commodity:</p>
+  <p class="card-title mb-4">{{application.regNo}}</p>
+  <p class="mb-0">Description (optional):</p>
+  <p class="card-title mb-4">{{application.prodAppRate}}</p>
+  <p class="mb-0">Bloom Start (optional):</p>
+  <p class="card-title mb-4">{{application.usePattern}}</p>
+  <p class="mb-0">Bloom End (optional):</p>
+  <p class="card-title mb-4">{{application.date}}</p>
+  <p class="mb-0">Harvest Date (optional):</p>
+  <p class="card-title">{{application.workTime}}</p>
+  <div class="flex-row">
+    <a (click)="selectApplication(application)" class="btn btn-green" mdbRippleRadius>Select</a>
+    <a (click)="editApplication(application)" class="btn btn-amber" mdbRippleRadius>Edit</a>
+    <a (click)="deleteApplication(application)" class="btn btn-red darken-3" mdbRippleRadius>Delete</a>
+  </div>
+</div>
+

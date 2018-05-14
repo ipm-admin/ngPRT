@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { SiteComponent } from './sites/site/site.component';
+import { SitesComponent } from './sites/sites.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-workspace',
+  selector: 'workspace',
   templateUrl: './workspace.component.html',
   styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent implements OnInit {
   step = 1;
-  readyToAdvance = true;
+  readyToAdvance = false;
 
   constructor() { }
 
@@ -20,11 +21,12 @@ export class WorkspaceComponent implements OnInit {
     if (this.step > 1) {
       this.step--;
     }
-  }
+  } 
 
   nextStep() {
     if (this.step >= 1) {
       this.step++;
+      // this.readyToAdvance = false;
     }
   }
 
@@ -32,8 +34,7 @@ export class WorkspaceComponent implements OnInit {
     this.readyToAdvance = true;
   }
 
-
-  
-  
-
+  setStatus(){
+    this.readyToAdvance = !this.readyToAdvance;
+  }
 }

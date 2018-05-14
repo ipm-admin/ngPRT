@@ -1,0 +1,55 @@
+<div class="row pb-5">
+  <div class="col-xs-12 col-md-4 pt-5">
+    <div class="card card-body mb-4">
+      <h4 class="card-title">Scenarios:</h4>
+      <p class="card-text text-muted">A Scenario consists of one or more pesticide applications on a management unit. A scenario can be historical (e.g., 2015
+      Spray Records), or hypothetical (e.g., comparison of potential products you are considering).</p>
+    </div>
+
+    <div class="card card-body">
+      <h4 class="card-title">Add a new scenario</h4>
+      <form>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioName" [(ngModel)]="newScenario.name" id="newScenarioName" class="form-control"
+            mdbActive>
+          <label for="newScenarioName">Name</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioCommodity" [(ngModel)]="newScenario.commodity" id="newScenarioCommodity" class="form-control"
+            mdbActive>
+          <label for="newScenarioeDesc">Commodity</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioDesc" [(ngModel)]="newScenario.desc" id="newScenarioDesc" class="form-control"
+            mdbActive>
+          <label for="newScenarioeDesc">Description</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioBloomStart" [(ngModel)]="newScenario.bloomStart" id="newScenarioBloomStart" class="form-control"
+            mdbActive>
+          <label for="newScenarioeBloomStart">Bloom Start</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioBloomEnd" [(ngModel)]="newScenario.bloomEnd" id="newScenarioBloomEnd" class="form-control"
+            mdbActive>
+          <label for="newScenarioBloomEnd">Bloom End</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newScenarioHarvestDate" [(ngModel)]="newScenario.harvestDate" id="newScenarioHarvestDate" class="form-control"
+            mdbActive>
+          <label for="newScenarioeHarvestDate">Harvest Date</label>
+        </div>
+        <a (click)="createScenario()" class="btn btn-green" mdbRippleRadius>Add Site</a>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-8 py-5">
+    <div class="scenario-list">
+      <scenario 
+        *ngFor="let scenario of scenarios" 
+        [scenario]="scenario"
+        (deleteSelectedScenario)="deleteScenario(scenario)"></scenario>
+    </div>
+  </div>
+</div>

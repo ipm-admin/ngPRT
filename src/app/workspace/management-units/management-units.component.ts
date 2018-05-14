@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ManagementUnitsService } from '../../management-units.service';
+import { ManagementUnitsService } from '../../shared/management-units.service';
 
 
 @Component({
@@ -9,6 +9,13 @@ import { ManagementUnitsService } from '../../management-units.service';
 })
 export class ManagementUnitsComponent implements OnInit {
   managementUnits = [];
+  newManagementUnit = {
+    name: null,
+    type: null,
+    area: null,
+    areaUnits: null,
+    desc: null
+  }
 
   constructor(private managementUnitsService: ManagementUnitsService) { }
 
@@ -18,6 +25,16 @@ export class ManagementUnitsComponent implements OnInit {
 
   getManagementUnits(){
     this.managementUnits = this.managementUnitsService.getManagementUnits();
-  }
+  } 
 
+  createManagementUnit() {
+    this.managementUnits.push(this.newManagementUnit);
+    this.newManagementUnit = {
+      name: null,
+      type: null,
+      area: null,
+      areaUnits: null,
+      desc: null
+    };
+  }
 }

@@ -10,7 +10,25 @@ export class ManagementUnitsService {
       area: 22,
       areaUnits: 'acre',
       desc: 'this is a description?',
-      id: 0,
+      id: 1,
+      siteID: 0
+    },
+    {
+      name: 'mu-2',
+      type: 'almonds',
+      area: 6,
+      areaUnits: 'acre',
+      desc: 'this is a description?',
+      id: 1,
+      siteID: 0
+    },
+    {
+      name: 'mu-2',
+      type: 'almondssssss',
+      area: 6,
+      areaUnits: 'acre',
+      desc: 'this is a description?',
+      id: 1,
       siteID: 0
     }
   ];

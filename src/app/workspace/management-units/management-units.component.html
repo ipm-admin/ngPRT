@@ -4,6 +4,37 @@
       <h4 class="card-title">Management Units:</h4>
       <p class="card-text text-muted">A Management Unit is a smaller piece of land within a site, usually a field. Also called a block.</p>
     </div>
+    <div class="card card-body">
+      <h4 class="card-title">Add a management unit</h4>
+      <form>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newManagementUnitName" [(ngModel)]="newManagementUnit.name" id="newManagementUnitName" class="form-control"
+            mdbActive>
+          <label for="newManagementUnitName">Name</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newManagementUnitType" [(ngModel)]="newManagementUnit.type" id="newManagementUnitType"
+            class="form-control" mdbActive>
+          <label for="newManagementUnitType">Type</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newManagementUnitArea" [(ngModel)]="newManagementUnit.area" id="newManagementUnitArea"
+            class="form-control" mdbActive>
+          <label for="newManagementUnitArea">Area</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newManagementUnitAreaUnits" [(ngModel)]="newManagementUnit.areaUnits" id="newManagementUnitAreaUnits"
+            class="form-control" mdbActive>
+          <label for="newManagementUnitAreaUnits">Area Units</label>
+        </div>
+        <div class="md-form">
+          <input mdbInputDirective type="text" name="newManagementUnitDesc" [(ngModel)]="newManagementUnit.desc" id="newManagementUnitDesc" class="form-control"
+            mdbActive>
+          <label for="newManagementUnitDesc">Description</label>
+        </div>
+        <a (click)="createManagementUnit()" class="btn btn-green" mdbRippleRadius>Add Management unit</a>
+      </form>
+    </div>
   </div>
   <div class="col-xs-12 col-md-8 py-5">
     <div class="management-unit-list">

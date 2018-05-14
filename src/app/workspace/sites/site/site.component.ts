@@ -30,6 +30,7 @@ export class SiteComponent implements OnInit {
   // }
 
   deleteSite(site) {
+    alert("are you sure?");
     this.deleteSelectedSite.emit(site);
   }
 

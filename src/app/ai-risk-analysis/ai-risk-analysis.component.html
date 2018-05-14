@@ -1,0 +1,29 @@
+<div class="container pb-5">
+  <div class="row pt-5">
+    <div class="col"></div>
+    <div class="col-xs-12 col-lg-8">
+      <div class="card card-body">
+        <h2 class="card-title">Active Ingredient Risk Analysis</h2>
+        <p class="card-text">Select a file to process:</p>
+        <div class="btn-sm mb-3" mdbWavesEffect>
+          <input type="file" mdbFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+        </div>
+        <p class="card-text">The templates can be downloaded by clicking the appropriate button below:</p>
+        <div class="col-xs-12 text-center">
+          <button class="btn btn-green">Download CAS Template</button>
+          <button class="btn btn-green">Download PRI Template</button>
+        </div>
+        <div class="col-xs-12 my-3">
+          <select name="" id="">
+            <option value="cas">Run by CAS Number</option>
+            <option value="pri">Run by PRI Number</option>
+          </select>
+        </div>
+        <p class="card-text">Indicate the way you identify active ingredients in the template (CAS Number or PRI ID).</p>
+        <div class="col-xs-12 text-center">
+          <button class="btn btn-red">Upload & Get Results</button>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
